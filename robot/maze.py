@@ -12,12 +12,17 @@ from tealight.robot import (move,
 #move again
 
 
-while touch() != 'wall':
-  move()
+while n < 1250:
+
+
+  while touch() != 'wall':
+    move()
   
-if touch() == 'wall':
-  turn(1)
+  if touch() == 'wall':
+    turn(1)
   
-while touch() != 'wall':
-  move()
+  while touch() != 'wall':
+    move()
+  
+
   
