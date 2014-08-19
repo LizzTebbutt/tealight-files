@@ -5,9 +5,8 @@ def polygon(edges, size):
   for i in range(0, edges):
     move(size)
     turn(angle)
-
-turn(180)    
-move(40)
+    turn(180)    
+    move(40)
     
    
 polygon(4,400)
