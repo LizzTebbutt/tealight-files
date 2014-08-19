@@ -11,9 +11,7 @@ from tealight.robot import (move,
 #if there is a wall to the left, turn left and check again
 #move again
 
-
-while n < 1250:
-
+while touch() !="fruit":
 
   while touch() != 'wall':
     move()
@@ -24,5 +22,5 @@ while n < 1250:
   while touch() != 'wall':
     move()
   
-
+  
   
