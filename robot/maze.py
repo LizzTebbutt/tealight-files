@@ -6,5 +6,7 @@ from tealight.robot import (move,
                             left_side, 
                             right_side)
 
-move()
+If left_side != wall
+  turn 1
+  move
   
