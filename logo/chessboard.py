@@ -7,6 +7,8 @@ def polygon(edges, size):
     turn(angle)
     turn(180)    
     move(40)
+    turn(90)
+    move(400)
     
    
 polygon(4,400)
