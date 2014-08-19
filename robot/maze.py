@@ -7,10 +7,10 @@ from tealight.robot import (move,
                             right_side)
 
 if left_side() != "wall":
-  turn 1
+  turn() 1
   move
 else if right_side() != "wall": 
-  turn -1
+  turn() -1
   move
   
   
