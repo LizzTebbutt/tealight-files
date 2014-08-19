@@ -14,5 +14,5 @@ def waterwheel(edges, size):
     square(decoration)
     turn(angle)
 
-turn(0)
+turn(10)
 waterwheel(30,75)
