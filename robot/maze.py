@@ -12,15 +12,15 @@ from tealight.robot import (move,
 #move again
 
 
-while touch() !="fruit":
+while touch() != "fruit":
 
-  while touch() != 'wall':
+  while touch() != "wall":
     move()
   
-  if touch() == 'wall':
+  if touch() == "wall":
     turn(1)
   
-    if touch()=='wall':
+    if touch() == "wall":
       turn(2)
   
   
