@@ -16,12 +16,7 @@ while touch() != "fruit":
   
   while left_side == "wall":
     move()
-    
-  if left_side != "wall":
-    turn(-1)
-    
-  while left_side == "wall":
-    move()
+
 
 
 
