@@ -6,10 +6,10 @@ from tealight.robot import (move,
                             left_side, 
                             right_side)
 
-if left_side() != "wall"
+if left_side() != "wall":
   turn 1
   move
-else if right_side() != "wall" 
+else if right_side() != "wall": 
   turn -1
   move
   
