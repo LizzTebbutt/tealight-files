@@ -15,4 +15,4 @@ def waterwheel(edges, size):
     turn(angle)
 
 turn(-90)                                 #rotates around central pivot
-waterwheel(30,100)                         #size of waterwheel
+waterwheel(20,100)                         #size of waterwheel
