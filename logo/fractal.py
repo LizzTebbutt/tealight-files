@@ -23,3 +23,5 @@ turn(90)
 move(-300)
 segment(600,6)
 move(-300)
+color("hsl(%d,60%%,50%%)" % i)
+  i += 1
