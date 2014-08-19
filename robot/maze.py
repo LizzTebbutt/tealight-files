@@ -11,5 +11,5 @@ from tealight.robot import (move,
 #if there is a wall to the left, turn left and check again
 #move again
 
-while touch() !="wall":
+while True touch() !="wall":
   move
