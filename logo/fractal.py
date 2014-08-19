@@ -1,4 +1,4 @@
-from tealight.logo import import (move, turn,
+from tealight.logo import import (move, 
                            pen_down, pen_up,
                            show_turtle, hide_turtle,
                            color, speed)
