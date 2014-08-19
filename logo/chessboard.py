@@ -6,7 +6,7 @@ def polygon(edges, size):
     move(size)
     turn(angle)
 
-for i in range(0, edges)
+for i in range(0, edges):
    move(40)
    turn(90)
    move(400)
