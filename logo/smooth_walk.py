@@ -8,7 +8,6 @@ from random import random
 i = 0
 
 while i < 10000:
-  print i
   color("hsl(%d,60%%,50%%)" % i)
   i += 1
 
