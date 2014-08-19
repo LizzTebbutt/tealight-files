@@ -10,5 +10,7 @@ move(50)
 turn(90)
 move(50)
 turn(270)
+move(50)
+turn(90)
     
 polygon(4,50)
