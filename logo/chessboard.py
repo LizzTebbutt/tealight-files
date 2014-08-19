@@ -6,8 +6,7 @@ def polygon(edges, size):
     move(size)
     turn(angle)
     
-for i in range(0,10)
-    move(size/10)
+
     
    
 polygon(4,400)
