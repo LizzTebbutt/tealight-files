@@ -14,8 +14,6 @@ def handle_keydown(key):
   
   ay=(power/9.8)
 
-  if -20 < "power" < 20
-  ax=0
   
   if key == "left":
     ax = (-power)
@@ -30,7 +28,7 @@ def handle_keyup(key):
   global ax, ay
 
   if key == "left" or key == "right":
-    ax = 0
+    ax = -3
   elif key == "up" or key == "down":
     ay = 0
     
