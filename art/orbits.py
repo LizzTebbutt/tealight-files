@@ -33,15 +33,15 @@ def handle_keyup(key):
 def handle_frame():
   global x,y,vx,vy,ax,ay
   
-  if 1020 < vy:
+  if 1020 < y:
     vy=-vy
-  elif vy < 1:
+  elif y < 1:
     vy=-vy
     
     
-  if 910 < vx:
+  if 910 < x:
     vx=-vx  
-  elif vx < 1:
+  elif x < 1:
     vx=-vx
   
   color("white")
