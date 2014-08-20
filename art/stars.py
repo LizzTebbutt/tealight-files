@@ -16,6 +16,6 @@ def circle(x, y, c, size, spines):
     
     angle = angle + (2 * pi / spines)
 
-star(300, 300, "teal", 100, 50)
-star(600, 400, "violet", 200, 100)
-star(450, 200, "gold", 125, 30)
+circle(300, 300, "teal", 100, 50)
+circle(600, 400, "violet", 200, 100)
+circle(450, 200, "gold", 125, 30)
