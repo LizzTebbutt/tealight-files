@@ -14,7 +14,7 @@ def circle(x, y, c, size, spines):
     
     line(x, y, x0, y0)
     
-    angle = angle + (2 * pi / 1999)
+    angle = angle + (2 * pi / 100)
 
 circle(300, 300, "teal", 100, 50)
 circle(600, 400, "violet", 200, 100)
