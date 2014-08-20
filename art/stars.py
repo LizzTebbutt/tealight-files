@@ -2,7 +2,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from math import sin, cos, pi
 
-def star(x, y, c, size, spines):
+def circle(x, y, c, size, spines):
   
   color(c)
   
