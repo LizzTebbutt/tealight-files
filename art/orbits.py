@@ -6,6 +6,7 @@ vx = 0
 vy = 0
 ax = 0
 ay = 0.1981
+t=0.1
 
 power = 0.3
 
@@ -35,8 +36,8 @@ def handle_frame():
   color("white")
   
   spot(x,y,8)
-  vx = vx + (ax-(ax(0.1^ax)))
-  vy = vy + (ay)
+  vx = vx + (ax-(ax(t^ax)))
+  vy = vy + (ay-(ay(t^ay)))
   
   x = x + vx
   y = y + vy
