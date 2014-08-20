@@ -9,10 +9,10 @@ def circle(x, y, c, size, spines):
   angle = 0
   
   for i in range(0, spines):
-    x0 = x + (size * cos(angle))
+    x0 = x + (size * sin(angle))
     y0 = y + (size * sin(angle))
     
-    circle(x, y, x0, y0)
+    line(x, y, x0, y0)
     
     angle = angle + (2 * pi / spines)
 
