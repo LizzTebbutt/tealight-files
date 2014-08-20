@@ -14,7 +14,7 @@ def star(x, y, c, size, spines):
     
     line(x, y, x0, y0)
     
-    angle = angle + (1 * pi / spines)
+    angle = angle + (2 * pi / spines)
 
 star(300, 300, "teal", 100, 50)
 star(600, 400, "violet", 200, 100)
