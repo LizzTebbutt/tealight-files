@@ -14,13 +14,13 @@ def handle_keydown(key):
   global ax, ay 
   
   if key == "left":
-    ax = (-power)
+    ax = -power + power(0.1^power)
   elif key == "right":
-    ax = power
+    ax = power - power(0.1^power)
   elif key == "up":
-    ay = -power
+    ay = -power + power(0.1^power)
   elif key == "down":
-    ay = power
+    ay = power - power(0.1^power)
 
 def handle_keyup(key):
   global ax, ay
