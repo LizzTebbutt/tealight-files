@@ -2,13 +2,13 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from math import sin, cos, pi
 
-def circle(x, y, c, size):
+def circle(x, y, c, size, spines):
   
   color(c)
   
   angle = 0
   
-  for i in range(0, size):
+  for i in range(0, spines):
     x0 = x + (size * cos(angle))
     y0 = y + (size * sin(angle))
     
