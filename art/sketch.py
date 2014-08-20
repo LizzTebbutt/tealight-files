@@ -3,10 +3,10 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 lastx = 0
 lasty = 0
 
-def(colourL):
+def colourL(color):
   color("red")
   
-def(colourR):
+def colourR(color):
   color("blue")
 
 def handle_mousedown(x,y):
@@ -19,7 +19,7 @@ def handle_mousemove(x,y,button):
   global lastx, lasty
   
   if button == "left":
-    color("blue")
+    colorR
     line(lastx, lasty, x, y)
     lastx = x
     lasty = y
