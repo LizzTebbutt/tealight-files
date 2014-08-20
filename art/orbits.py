@@ -14,7 +14,7 @@ def handle_keydown(key):
   
   ay=(power/9.8)
 
-  if power > 20
+  if %power > 20
   ax=0
   
   if key == "left":
