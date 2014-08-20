@@ -28,7 +28,7 @@ def handle_keyup(key):
   global ax, ay
 
   if key == "left" or key == "right":
-    ax = -3
+    ax = 3
   elif key == "up" or key == "down":
     ay = 0
     
