@@ -12,7 +12,7 @@ power = 0.3
 def handle_keydown(key):
   global ax, ay
   
-  ay = power - ((power * 0.9 ^ power)/1.5)
+  ay = power / 9.81
  
   
   if key == "left":
