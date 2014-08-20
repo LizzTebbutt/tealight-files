@@ -4,10 +4,10 @@ lastx = 0
 lasty = 0
 
 def colourL(color):
-  color(0)
+  x=0
   
 def colourR(color):
-  color(0)
+  x=0
 
 def handle_mousedown(x,y):
   global lastx, lasty
