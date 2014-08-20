@@ -5,15 +5,12 @@ y = 400
 vx = 0
 vy = 0
 ax = 0
-ay = 0
+ay = -9.81
 
 power = 0.3
 
 def handle_keydown(key):
-  global ax, ay
-  
-  ay = power - ((power * 0.9 ^ power)/1.5)
- 
+  global ax, ay 
   
   if key == "left":
     ax = (-power)
@@ -47,8 +44,3 @@ def handle_frame():
   color("blue")
   
   spot(x,y,8)
-  
-print power  
-
-while power > 10
-  power=10
