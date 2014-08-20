@@ -48,4 +48,4 @@ def handle_frame():
   
   spot(x,y,8)
   
-  
+print power  
