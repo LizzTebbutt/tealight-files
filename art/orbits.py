@@ -33,9 +33,9 @@ def handle_keyup(key):
 def handle_frame():
   global x,y,vx,vy,ax,ay
   
-  if 1020 < vy < 1
+  if 1020 < vy, vy < 1
     vy=-vy
-  if 910 < vx < 1
+  if 910 < vx, vx < 1
     vx=-vx  
   
   color("white")
