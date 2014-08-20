@@ -6,10 +6,10 @@ y = 150
 width = 20
 height = 8
 
-for i in range(0,width):
-  for j in range(0,height):
+for i in range(height,width):
+  for j in range(width,height):
     if i % 2 == 0:
-      image(x + i * 40, y + j * 40, "misc/YellowFlower.png")
+      image(x + i * 60, y + j * 60, "misc/YellowFlower.png")
     else:
-      image(x + i * 40, y + j * 40, "misc/Clover.png")
+      image(x + i * 60, y + j * 60, "misc/Clover.png")
      
