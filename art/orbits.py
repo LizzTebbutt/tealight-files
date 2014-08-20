@@ -49,3 +49,6 @@ def handle_frame():
   spot(x,y,8)
   
 print power  
+
+while power > 10
+  power=10
