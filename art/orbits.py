@@ -20,7 +20,7 @@ def handle_keydown(key):
   elif key == "up":
     ay = -power + (power*(0.1^power))
   elif key == "down":
-    ay = power - (power(0.1^power))
+    ay = power - (power*(0.1^power))
 
 def handle_keyup(key):
   global ax, ay
