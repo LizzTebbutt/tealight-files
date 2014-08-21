@@ -68,7 +68,8 @@ def handle_mousedown(Mx,My):
   lastx = Mx
   lasty = My
 
-def handle_mousemove(lastx, lasty, Mx, My, button):
+def handle_mousemove(Mx, My, button):
+  global lastx, lasty
   
   if 0 < lastx < 50 and 0 < lasty < 50:
     color("blue")
