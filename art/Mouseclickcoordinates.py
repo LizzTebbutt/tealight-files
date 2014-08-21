@@ -71,8 +71,9 @@ def handle_mousedown(Mx,My):
 def handle_mousemove(Mx, My, button):
   global lastx, lasty
   
-  if 50 < Mx < 550 & 50 < My < 550:
-    lastx = Mx
-    lasty = My
-    print(Mx)
+  if 50 < Mx < 550 
+    if 50 < My < 550:
+      lastx = Mx
+      lasty = My
+      print(Mx)
     
