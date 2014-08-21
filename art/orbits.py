@@ -33,7 +33,7 @@ def handle_keyup(key):
 def handle_frame():
   global x,y,vx,vy,ax,ay
   
-  if 1020 < y:
+  if 1010 < y:
     vy=-vy
   elif y < 1:
     vy=-vy
