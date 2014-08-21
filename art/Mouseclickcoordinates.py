@@ -72,8 +72,7 @@ def handle_mousemove(Mx, My, button):
   global lastx, lasty
   
   if 0 < Mx < 50:
-    color("blue")
-    line(lastx, lasty, Mx, My)
     lastx = Mx
     lasty = My
+    print(Mx)
     
