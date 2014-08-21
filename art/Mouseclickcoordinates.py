@@ -36,7 +36,7 @@ def DrawGrid():
       OffsetY += SquareSize
     OffsetX += SquareSize
     OffsetY = 0
-   
+
 def DrawCoveredSquare():
   color("#cccccc")
   box(StartingX + OffsetX,StartingY + OffsetY,SquareSize,SquareSize)
@@ -57,15 +57,12 @@ def DrawMine(x,y):
 PlaceBombs(NumberOfBombs)
 DrawGrid()
 
-
-
-
-
 #--------------------------my code-------------------------#
 
 def handle_mousemove(x,y,button):
-  global lastx, lasty
   
+  global lastx, lasty
+ 
   if button == "left":
     color("blue")
     line(lastx, lasty, x, y)
@@ -77,4 +74,6 @@ def handle_mousemove(x,y,button):
     line(lastx, lasty, x, y)
     lastx = x
     lasty = y
-  
+    
+    print x
+    print y
