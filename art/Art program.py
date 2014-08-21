@@ -2,3 +2,4 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 #---------------------------------colour pallete---------------------------------#
 
+box(250,250,100,100)
