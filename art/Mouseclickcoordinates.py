@@ -1,5 +1,3 @@
-from tealight.art import (color, line, spot, circle, box, image, text, background)
-
 from random import random, randint
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 
@@ -13,10 +11,8 @@ OffsetX = 0
 OffsetY = 0
 
 
-BombArray = [[0 for x in range(HLimit)] for y in range(WLimit)]
-VisibleArray = [[0 for x in range(HLimit)] for y in range(WLimit)]
-VisibleArray[5][8] = 1
-
+BombArray = [[0 for x in range(0,HLimit)] for y in range(0,WLimit)]
+VisibleArray = [[0 for x in range(0,HLimit)] for y in range(0,WLimit)]
 
 def PlaceBombs(NumberOfBombs):
   BombsPlaced = 0
@@ -31,13 +27,13 @@ def DrawGrid():
   global OffsetX, OffsetY
   for x in range(0,HLimit):
     for y in range(0,WLimit):
-      OffsetY += SquareSize
       if VisibleArray[x][y]==0:
         DrawCoveredSquare()
       elif VisibleArray[x][y] == 1:
         DrawUncoveredSquare()
       if BombArray[x][y] == -1:
-        DrawMine()
+        DrawMine(x,y)
+      OffsetY += SquareSize
     OffsetX += SquareSize
     OffsetY = 0
    
@@ -53,13 +49,16 @@ def DrawUncoveredSquare():
   color("#cccccc")
   box(StartingX + (SquareSize * 0.1)/2 + OffsetX,StartingY + (SquareSize * 0.1)/2 + OffsetY,SquareSize * 0.9,SquareSize * 0.9)
 
-def DrawMine():
+def DrawMine(x,y):
   color("red")
-  spot(StartingX + SquareSize * x,StartingY + SquareSize * y, 10)
+  spot(StartingX + SquareSize * x + SquareSize * 0.5,StartingY + SquareSize * y + SquareSize * 0.5, 10)
   
   
 PlaceBombs(NumberOfBombs)
 DrawGrid()
+
+
+
 
 
 #--------------------------my code-------------------------#
