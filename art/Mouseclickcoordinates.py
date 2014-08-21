@@ -76,4 +76,3 @@ def handle_mousemove(Mx, My, button):
       lastx = Mx
       lasty = My
       print(Mx)
-    
