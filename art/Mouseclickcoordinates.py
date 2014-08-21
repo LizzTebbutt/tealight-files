@@ -61,3 +61,25 @@ DrawGrid()
 
 def mousecoord():
   mx = 
+  
+def handle_mousedown(x,y):
+  global lastx, lasty
+  
+  lastx = x
+  lasty = y
+
+def handle_mousemove(x,y,button):
+  global lastx, lasty
+  
+  if button == "left":
+    color("blue")
+    line(lastx, lasty, x, y)
+    lastx = x
+    lasty = y
+    
+  if button == "right":
+    color("red")
+    line(lastx, lasty, x, y)
+    lastx = x
+    lasty = y
+  
