@@ -68,7 +68,7 @@ def handle_mousedown(Mx,My):
   lastx = Mx
   lasty = My
 
-def handle_mousemove(x,y,button):
+def handle_mousemove(Mx,My,button):
   global lastx, lasty
   
   if button == "left":
