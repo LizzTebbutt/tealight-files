@@ -1,1 +1,2 @@
-print "A new file!"
+den handle_message(message):
+   print "recieved message" + message
