@@ -71,15 +71,9 @@ def handle_mousedown(Mx,My):
 def handle_mousemove(Mx,My,button):
   global lastx, lasty
   
-  if button == "left":
+  if 0 < lastx < 50 and 0 < lasty < 50:
     color("blue")
     line(lastx, lasty, Mx, My)
     lastx = Mx
     lasty = My
     
-  if button == "right":
-    color("red")
-    line(lastx, lasty, Mx, My)
-    lastx = Mx
-    lasty = My
-  
