@@ -59,8 +59,8 @@ DrawGrid()
 
 #--------------------------my code-------------------------#
 
-def mousecoord():
-  mx = 
+#def mousecoord():
+  #mx = 
   
 def handle_mousedown(x,y):
   global lastx, lasty
