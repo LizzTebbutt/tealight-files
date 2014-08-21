@@ -4,3 +4,4 @@ connect("chat.py")
 
 def handle_message(message):
    print "recieved message" + message
+
