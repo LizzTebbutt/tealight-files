@@ -3,10 +3,6 @@ from tealight.art import (color, line, spot, circle, box, rectangle, font, image
 from tealight.art import (screen_width, screen_height)
 from tealight.utils import (sleep)
 
-
-
-#--------------------------------randomise bombs------------------------------#
-
 def PlaceBombs(NumberOfBombs):
   BombsPlaced = 0
   while BombsPlaced < NumberOfBombs:
@@ -20,16 +16,12 @@ def PlaceBombs(NumberOfBombs):
       if BombArray[x][y] > -1:
         BombCheck(x,y)
   
-  
-
-#----------------------------------draw grid----------------------------------#
-  
 def DrawGrid():
   global OffsetX, OffsetY
   OffsetX = 0
   OffsetY = 0
   color("#cccccc")
-  box(StartingX - 2,StartingY - 2,SquareSize * WLimit + 4,SquareSize * HLimit +4)
+  box(StartingX - 2,StartingY - 2,SquareSize * WLimit + 8,SquareSize * HLimit +8)
   for x in range(0,HLimit):
     for y in range(0,WLimit):
       if VisibleArray[x][y]==0:
@@ -50,10 +42,6 @@ def DrawGrid():
     OffsetX += SquareSize
     OffsetY = 0
    
-    
-    
-#--------------------------------draw functions-------------------------------#    
-
 def DrawCoveredSquare():
   color("#cccccc")
   box(StartingX + OffsetX,StartingY + OffsetY,SquareSize,SquareSize)
@@ -71,8 +59,6 @@ def DrawMine(x,y, colour):
   x += 0.5
   y += 0.5
   spot(StartingX + SquareSize * x,StartingY + SquareSize * y, SquareSize/5)
-
-#-----------------------------------numbers-----------------------------------#  
 
 def DrawNumber(x,y,NumberOfMines):
   global BombArray
@@ -94,25 +80,20 @@ def DrawNumber(x,y,NumberOfMines):
   elif BombArray[x][y] == 8:
     color("#00C19B")
 
-  x += 0.35
-  y += 0.25
-  
-  font("5000px")
-  text(StartingX + SquareSize * x,StartingY + SquareSize * y, NumberOfMines)
-
-#------------------------------------flags------------------------------------#
+  size = SquareSize /2
+  fontsize = str(size)+"px Courier New Bold"
+  font(fontsize)
+  text(StartingX + SquareSize * x +size/2,StartingY + SquareSize * y +size/2, NumberOfMines)
   
 def DrawFlag(x,y):
   global SquareSize
   DrawCoveredSquare()
   BoxSize = SquareSize/3
-  color("black")
+  color("gold")
   box(StartingX + SquareSize * x + SquareSize/2 - BoxSize/2,StartingY + SquareSize * y + SquareSize/2 - BoxSize/2, SquareSize/3,SquareSize/3)
-  color("red")
+  color("orange")
   rectangle(StartingX + SquareSize * x + SquareSize/2 - BoxSize/2,StartingY + SquareSize * y + SquareSize/2 - BoxSize/2, SquareSize/3,SquareSize/3)
   
-#-------------------------------check for bombs-------------------------------#  
-
 def BombCheck(x,y):
   global BombArray
   BombCount = 0
@@ -145,7 +126,6 @@ def handle_mousedown(Mx,My, button):
               FloodBoard(lastx,lasty)
             else:
               IsBomb(lastx,lasty)
-          print NumberUncovered
           if lost == True:
            for x in range(0,HLimit):
             for y in range(0,WLimit):
@@ -186,11 +166,12 @@ def FloodBoard(x,y):
         VisibleArray[i][j] = 1
         if BombArray[i][j] == 0:
           FloodBoard(i,j)
-      
+
+          
 #---------------------------------settings------------------------------------#
-      
+          
+
 NumberOfBombs = 50
-NumberUncovered = 0
 HLimit = 20
 WLimit = HLimit
 SquareSize = 500/HLimit
@@ -202,15 +183,11 @@ lastx = 0
 lasty = 0
 lost = False
 won = False
-
-#-----------------------------------startup-----------------------------------#
+NumberUncovered = 0
 
 image(StartingX,50,"http://www.ezimba.com/work/140822C/ezimba16125732408300.png")
-image(StartingX - 200,140+ SquareSize * HLimit,"http://www.ezimba.com/work/140822C/ezimba16125769303800.png")
+image(screen_width/2 - 1000,screen_height -347,"http://i.imgur.com/ofNb09J.png")
 BombArray = [[0 for x in range(0,HLimit)] for y in range(0,WLimit)]
 VisibleArray = [[0 for x in range(0,HLimit)] for y in range(0,WLimit)]
 PlaceBombs(NumberOfBombs)
 DrawGrid()
-
-
-
