@@ -111,6 +111,8 @@ def DrawFlag(x,y):
   color("red")
   rectangle(StartingX + SquareSize * x + SquareSize/2 - BoxSize/2,StartingY + SquareSize * y + SquareSize/2 - BoxSize/2, SquareSize/3,SquareSize/3)
   
+#-------------------------------check for bombs-------------------------------#  
+
 def BombCheck(x,y):
   global BombArray
   BombCount = 0
@@ -185,6 +187,8 @@ def FloodBoard(x,y):
         if BombArray[i][j] == 0:
           FloodBoard(i,j)
       
+#---------------------------------settings------------------------------------#
+      
 NumberOfBombs = 50
 NumberUncovered = 0
 HLimit = 20
@@ -198,6 +202,8 @@ lastx = 0
 lasty = 0
 lost = False
 won = False
+
+#-----------------------------------startup-----------------------------------#
 
 image(StartingX,50,"http://www.ezimba.com/work/140822C/ezimba16125732408300.png")
 image(StartingX - 200,140+ SquareSize * HLimit,"http://www.ezimba.com/work/140822C/ezimba16125769303800.png")
