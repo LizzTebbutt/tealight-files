@@ -100,9 +100,6 @@ def DrawNumber(x,y,NumberOfMines):
   
   font("5000px")
   text(StartingX + SquareSize * x,StartingY + SquareSize * y, NumberOfMines)
-  
-  
-  
 #------------------------------------flags------------------------------------#
   
 def DrawFlag(x,y):
