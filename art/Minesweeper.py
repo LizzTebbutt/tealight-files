@@ -191,9 +191,3 @@ DrawGrid()
 
 #===================================BUTTONS===================================#
 
-def DrawButtons():
-  global OffsetX, OffsetY
-  OffsetX = 0
-  OffsetY = 0
-  color("#cccccc")
-  box(StartingX + 20,StartingY - 2,SquareSize * WLimit + 8,SquareSize * HLimit +8)
