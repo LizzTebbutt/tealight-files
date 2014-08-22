@@ -51,7 +51,7 @@ def DrawGrid():
     OffsetY = 0
    
     
-
+    
 #--------------------------------draw functions-------------------------------#    
 
 def DrawCoveredSquare():
@@ -70,9 +70,8 @@ def DrawMine(x,y, colour):
   color(colour)
   x += 0.5
   y += 0.5
-  spot(StartingX + SquareSize * x,StartingY + SquareSize * y, SquareSize/5
-       
-            
+  spot(StartingX + SquareSize * x,StartingY + SquareSize * y, SquareSize/5)
+
 #-----------------------------------numbers-----------------------------------#  
 
 def DrawNumber(x,y,NumberOfMines):
@@ -100,6 +99,7 @@ def DrawNumber(x,y,NumberOfMines):
   
   font("5000px")
   text(StartingX + SquareSize * x,StartingY + SquareSize * y, NumberOfMines)
+
 #------------------------------------flags------------------------------------#
   
 def DrawFlag(x,y):
