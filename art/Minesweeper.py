@@ -3,6 +3,10 @@ from tealight.art import (color, line, spot, circle, box, rectangle, font, image
 from tealight.art import (screen_width, screen_height)
 from tealight.utils import (sleep)
 
+
+
+#--------------------------------randomise bombs------------------------------#
+
 def PlaceBombs(NumberOfBombs):
   BombsPlaced = 0
   while BombsPlaced < NumberOfBombs:
@@ -15,6 +19,10 @@ def PlaceBombs(NumberOfBombs):
     for y in range(0,WLimit):
       if BombArray[x][y] > -1:
         BombCheck(x,y)
+  
+  
+
+#----------------------------------draw grid----------------------------------#
   
 def DrawGrid():
   global OffsetX, OffsetY
@@ -42,6 +50,10 @@ def DrawGrid():
     OffsetX += SquareSize
     OffsetY = 0
    
+    
+
+#--------------------------------draw functions-------------------------------#    
+
 def DrawCoveredSquare():
   color("#cccccc")
   box(StartingX + OffsetX,StartingY + OffsetY,SquareSize,SquareSize)
@@ -58,7 +70,10 @@ def DrawMine(x,y, colour):
   color(colour)
   x += 0.5
   y += 0.5
-  spot(StartingX + SquareSize * x,StartingY + SquareSize * y, SquareSize/5)
+  spot(StartingX + SquareSize * x,StartingY + SquareSize * y, SquareSize/5
+       
+            
+#-----------------------------------numbers-----------------------------------#  
 
 def DrawNumber(x,y,NumberOfMines):
   global BombArray
@@ -85,6 +100,10 @@ def DrawNumber(x,y,NumberOfMines):
   
   font("5000px")
   text(StartingX + SquareSize * x,StartingY + SquareSize * y, NumberOfMines)
+  
+  
+  
+#------------------------------------flags------------------------------------#
   
 def DrawFlag(x,y):
   global SquareSize
