@@ -193,4 +193,5 @@ DrawGrid()
 
 
 def drawbuttons(HLimit):
+  color=gold
   box(100,250,50,50)
