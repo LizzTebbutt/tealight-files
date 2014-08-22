@@ -83,6 +83,7 @@ def DrawNumber(x,y,NumberOfMines):
   size = SquareSize /2
   fontsize = str(size)+"px Courier New Bold"
   font(fontsize)
+  x += 0.125
   text(StartingX + SquareSize * x +size/2,StartingY + SquareSize * y +size/2, NumberOfMines)
   
 def DrawFlag(x,y):
@@ -159,19 +160,15 @@ def IsBomb(x,y):
 def FloodBoard(x,y):
   global BombArray, VisibleArray, NumberUncovered
 
-  for (i,j) in [(x-1,y-1),(x-1,y), (x-1, y+1), (x,y-1), (x, y+1), (x+1,y-1),(x+1,y), (x+1, y+1)]:
+  for (i,j) in [(x-1,y), (x,y-1), (x, y+1),(x+1,y)]:
     if (i >= 0 and i < WLimit and j >= 0 and j < HLimit):
       if VisibleArray[i][j] == 0 and BombArray[i][j] >= 0:
         NumberUncovered += 1
         VisibleArray[i][j] = 1
         if BombArray[i][j] == 0:
           FloodBoard(i,j)
-
-          
-#---------------------------------settings------------------------------------#
-          
-
-NumberOfBombs = 50
+      
+NumberOfBombs = 1
 HLimit = 20
 WLimit = HLimit
 SquareSize = 500/HLimit
@@ -191,3 +188,7 @@ BombArray = [[0 for x in range(0,HLimit)] for y in range(0,WLimit)]
 VisibleArray = [[0 for x in range(0,HLimit)] for y in range(0,WLimit)]
 PlaceBombs(NumberOfBombs)
 DrawGrid()
+
+#===================================BUTTONS===================================#
+
+ 
